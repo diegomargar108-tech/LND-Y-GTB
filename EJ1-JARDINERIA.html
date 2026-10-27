@@ -5,8 +5,13 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <ol type="i">
-            <li></li>
+        <ol>
+            <li>SELECT CodigoOficina , Ciudad FROM Oficinas;</li>
+            <li>SELECT COUNT(*) AS TotalEmpleados FROM Empleados;</li>
+            <li>SELECT Pais, COUNT(*) AS CantidadClientes FROM Clientes GROUP BY Pais;</li>
+            <li>SELECT AVG(Cantidad) AS PagoMedio FROM Pagos WHERE YEAR(FechaPago) = 2006;</li>
+            <li>SELECT Estado , COUNT(*) AS NumPedidos FROM Pedidos GROUP BY Estado ORDER BY NumeroPedidos ASC;</li>
+            <li>SELECT MAX(PrecioVenta) AS PrecioMasCaro , MIN(PrecioVenta) AS PrecioMasBajo FROM Productos;</li>
         </ol>
     </body>
 
