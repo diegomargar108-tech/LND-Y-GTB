@@ -10,8 +10,28 @@
             <li>SELECT COUNT(*) AS TotalEmpleados FROM Empleados;</li>
             <li>SELECT Pais, COUNT(*) AS CantidadClientes FROM Clientes GROUP BY Pais;</li>
             <li>SELECT AVG(Cantidad) AS PagoMedio FROM Pagos WHERE YEAR(FechaPago) = 2006;</li>
-            <li>SELECT Estado , COUNT(*) AS NumPedidos FROM Pedidos GROUP BY Estado ORDER BY NumeroPedidos ASC;</li>
+            <li>SELECT Estado , COUNT(*) AS NumPedidos FROM Pedidos GROUP BY Estado ORDER BY NumPedidos ASC;</li>
             <li>SELECT MAX(PrecioVenta) AS PrecioMasCaro , MIN(PrecioVenta) AS PrecioMasBajo FROM Productos;</li>
+            <li>SELECT Ciudad, Telefono FROM Oficinas WHERE Pais IN ('EEUU', 'USA', 'Estados Unidos');</li>
+            <li>SELECT Nombre, Apellido1, Apellido2, Email FROM Empleados WHERE CodigoJefe = (SELECT CodigoEmpleado FROM Empleados WHERE Nombre = 'Alberto' AND Apellido1 = 'Soria');</li>
+            <li>SELECT Puesto, Nombre, Apellido1, Apellido2, Email FROM Empleados WHERE CodigoJefe IS NULL;</li>
+            <li>SELECT Nombre, Apellido1, Apellido2, Puesto FROM Empleados WHERE Puesto <> 'Representante Ventas';</li>
+            <li>SELECT COUNT(*) AS TotalClientes FROM Clientes;</li>
+            <li>SELECT NombreCliente FROM Clientes WHERE Pais IN ('Spain', 'España');</li>
+            <li>SELECT Pais, COUNT(*) AS NumeroClientes FROM Clientes GROUP BY Pais;</li>
+            <li>SELECT COUNT(*) AS ClientesMadrid FROM Clientes WHERE Ciudad = 'Madrid';</li>
+            <li>SELECT COUNT(*) AS ClientesCiudadesM FROM Clientes WHERE Ciudad LIKE 'M%';</li>
+            <li>SELECT CodigoEmpleadoRepVentas, COUNT(*) AS NumeroClientes FROM Clientes WHERE CodigoEmpleadoRepVentas IS NOT NULL GROUP BY CodigoEmpleadoRepVentas;</li>
+            <li>SELECT COUNT(*) AS ClientesSinRep FROM Clientes WHERE CodigoEmpleadoRepVentas IS NULL;</li>
+            <li>SELECT MIN(FechaPago) AS PrimerPago, MAX(FechaPago) AS UltimoPago FROM Pagos;</li>
+            <li>SELECT DISTINCT CodigoCliente FROM Pagos WHERE FechaPago BETWEEN '2008-01-01' AND '2008-12-31';</li>
+            <li>SELECT DISTINCT Estado FROM Pedidos;</li>
+            <li>SELECT CodigoPedido, CodigoCliente, FechaEsperada, FechaEntrega FROM Pedidos WHERE FechaEntrega > FechaEsperada;</li>
+            <li>SELECT CodigoPedido, COUNT(DISTINCT CodigoProducto) AS CantidadProductos FROM DetallePedidos GROUP BY CodigoPedido;</li>
+            <li>SELECT CodigoProducto, SUM(Cantidad) AS TotalCantidad FROM DetallePedidos GROUP BY CodigoProducto ORDER BY TotalCantidad DESC LIMIT 20;</li>
+            <li>SELECT CodigoPedido, CodigoCliente, FechaEsperada, FechaEntrega FROM Pedidos WHERE FechaEntrega <= ADDDATE(FechaEsperada, INTERVAL -2 DAY);</li>
+            <li>SELECT SUM(Cantidad * PrecioUnidad) AS BaseImponible, SUM(Cantidad * PrecioUnidad) * 0.18 AS IVA, SUM(Cantidad * PrecioUnidad) * 1.18 AS TotalFacturado FROM DetallePedidos;</li>
+            <li>SELECT CodigoProducto, SUM(Cantidad * PrecioUnidad) AS BaseImponible, SUM(Cantidad * PrecioUnidad) * 0.18 AS IVA, SUM(Cantidad * PrecioUnidad) * 1.18 AS TotalFacturado FROM DetallePedidos WHERE CodigoProducto LIKE 'FR%' GROUP BY CodigoProducto;</li>
         </ol>
     </body>
 
