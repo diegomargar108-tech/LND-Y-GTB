@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Práctica18_MapEdit</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 18 - Mapa de Municipios de Tenerife (ISTAC)</title>
+</head>
+<body>
+
+    <h1>Mapa Interactivo de Municipios de Tenerife</h1>
+    <p>Haz clic sobre Tegueste, La Laguna o Santa Cruz para abrir sus cifras oficiales directamente en la web del ISTAC.</p>
+
+    
+    <img src="municipios_tenerife.jpg" usemap="#mapa_tenerife" alt="Municipios de Tenerife" width="800" style="border: 0;">
+
+
+    <map name="mapa_tenerife">
+        
+        <!-- Enlace web oficial para Tegueste -->
+        <area shape="poly" coords="290,390,320,430,350,450,330,480,280,470,260,420" 
+              href="https://www.gobiernodecanarias.org/istac/estadisticas/demografia/poblacion/cifraspadronales/E30245A.html" 
+              target="_blank" alt="Cifras ISTAC Tegueste" title="Ver población de Tegueste en el ISTAC">
+        
+        <!-- Enlace web oficial para San Cristóbal de La Laguna -->
+        <area shape="poly" coords="300,150,430,400,450,480,390,560,330,550,220,400,200,200" 
+              href="https://www.gobiernodecanarias.org/istac/estadisticas/demografia/poblacion/cifraspadronales/E30245A.html" 
+              target="_blank" alt="Cifras ISTAC La Laguna" title="Ver población de La Laguna en el ISTAC">
+        
+        <!-- Enlace web oficial para Santa Cruz de Tenerife -->
+        <area shape="poly" coords="450,500,500,410,650,400,750,250,850,320,620,700,500,900,400,720" 
+              href="https://www.gobiernodecanarias.org/istac/estadisticas/demografia/poblacion/cifraspadronales/E30245A.html" 
+              target="_blank" alt="Cifras ISTAC Santa Cruz" title="Ver población de Santa Cruz en el ISTAC">
+        
+    </map>
+
+</body>
+</html>

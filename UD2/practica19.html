@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 19 - Tabla Tenerife</title>
+    <style>
+        /* Estilos básicos para que la tabla se vea idéntica a la de la ficha */
+        table {
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            width: 500px;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: top;
+        }
+        .header-cell {
+            padding-bottom: 20px;
+        }
+        .source-link {
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal con borde exterior simulando la figura -->
+    <table style="border: 1px solid black; padding: 5px;">
+        <tr>
+            <td>
+                
+                <!-- Tabla interior que estructura el contenido -->
+                <table style="width: 100%;">
+                    <!-- Fila 1: Título superior que ocupa las dos columnas -->
+                    <tr>
+                        <td colspan="2" class="header-cell" style="border: none;">
+                            <strong>Isla de Tenerife:</strong>
+                        </td>
+                    </tr>
+                    
+                    <!-- Fila 2: Imagen a la izquierda y datos de población a la derecha -->
+                    <tr>
+                        <td style="width: 60%; text-align: center; vertical-align: middle;">
+                            <!-- Asegúrate de tener la imagen municipios_tenerife.jpg en la misma carpeta -->
+                            <img src="municipios_tenerife.jpg" alt="Mapa de Tenerife" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </td>
+                        <td style="width: 40%;">
+                            <strong>Población en 2009:</strong><br>
+                            Hombres: 446.171<br>
+                            Mujeres: 453.662
+                        </td>
+                    </tr>
+                    
+                    <!-- Fila 3: Capital abajo a la izquierda y Fuente abajo a la derecha -->
+                    <tr>
+                        <td>
+                            <strong>Capital:</strong> Santa Cruz de Tenerife
+                        </td>
+                        <td>
+                            Fuente: <a href="https://www3.gobiernodecanarias.org/istac/statistical-visualizer/visualizer/data.html?resourceType=dataset&agencyId=ISTAC&resourceId=E30245A_000001&version=%7Elatest#visualization/table" target="_blank" class="source-link">ISTAC</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

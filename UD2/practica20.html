@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 20 - Tabla Compleja Tenerife</title>
+    <style>
+        /* Estilos para replicar el diseño de la imagen */
+        .contenedor-principal {
+            border: 1px solid gray;
+            background-color: white;
+            padding: 15px;
+            width: 550px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .titulo {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        td {
+            border: 1px solid gray;
+            padding: 8px;
+            vertical-align: middle;
+        }
+        .celda-imagen {
+            text-align: center;
+            width: 55%;
+        }
+        .celda-derecha {
+            width: 45%;
+        }
+        .celda-derecha-negrita {
+            font-weight: bold;
+        }
+        .celda-fuente {
+            text-align: right;
+            font-size: 13px;
+        }
+        .link-istac {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor exterior gris -->
+    <div class="contenedor-principal">
+        <span class="titulo">Isla de Tenerife:</span>
+        
+        <table>
+            <!-- Fila 1: Imagen (ocupa 3 filas hacia abajo) y Título de Población -->
+            <tr>
+                <td rowspan="3" class="celda-imagen">
+                    <img src="municipios_tenerife.jpg" alt="Mapa de Tenerife" style="max-width: 90%; height: auto;">
+                </td>
+                <td class="celda-derecha celda-derecha-negrita">
+                    Población en 2009:
+                </td>
+            </tr>
+            
+            <!-- Fila 2: Dato de Hombres -->
+            <tr>
+                <td class="celda-derecha">
+                    Hombres: 446.171
+                </td>
+            </tr>
+            
+            <!-- Fila 3: Dato de Mujeres -->
+            <tr>
+                <td class="celda-derecha">
+                    Mujeres: 453.662
+                </td>
+            </tr>
+            
+            <!-- Fila 4: Capital -->
+            <tr>
+                <td colspan="2">
+                    <strong>Capital:</strong> Santa Cruz de Tenerife
+                </td>
+            </tr>
+            
+            <!-- Fila 5: Fuente alineada a la derecha -->
+            <tr>
+                <td colspan="2" class="celda-fuente">
+                    Fuente: <a href="https://www3.gobiernodecanarias.org/istac/statistical-visualizer/visualizer/data.html?resourceType=dataset&agencyId=ISTAC&resourceId=E30245A_000001&version=%7Elatest#visualization/table" target="_blank" class="link-istac">ISTAC</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
