@@ -13,7 +13,7 @@
             <li>SELECT Estado , COUNT(*) AS NumPedidos FROM Pedidos GROUP BY Estado ORDER BY NumPedidos ASC;</li>
             <li>SELECT MAX(PrecioVenta) AS PrecioMasCaro , MIN(PrecioVenta) AS PrecioMasBajo FROM Productos;</li>
             <li>SELECT Ciudad, Telefono FROM Oficinas WHERE Pais IN ('EEUU', 'USA', 'Estados Unidos');</li>
-            <li>SELECT Nombre, Apellido1, Apellido2, Email FROM Empleados WHERE CodigoJefe = (SELECT CodigoEmpleado FROM Empleados WHERE Nombre = 'Alberto' AND Apellido1 = 'Soria');</li>
+            <li>SELECT Nombre, Apellido1, Apellido2, Email FROM Empleados WHERE CodigoJefe = 3;</li>
             <li>SELECT Puesto, Nombre, Apellido1, Apellido2, Email FROM Empleados WHERE CodigoJefe IS NULL;</li>
             <li>SELECT Nombre, Apellido1, Apellido2, Puesto FROM Empleados WHERE Puesto <> 'Representante Ventas';</li>
             <li>SELECT COUNT(*) AS TotalClientes FROM Clientes;</li>
