@@ -21,9 +21,9 @@
             <li>SELECT Pais, COUNT(*) AS NumeroClientes FROM Clientes GROUP BY Pais;</li>
             <li>SELECT COUNT(*) AS ClientesMadrid FROM Clientes WHERE Ciudad = 'Madrid';</li>
             <li>SELECT COUNT(*) AS ClientesCiudadesM FROM Clientes WHERE Ciudad LIKE 'M%';</li>
-            <li>SELECT CodigoEmpleadoRepVentas, COUNT(*) AS NumeroClientes FROM Clientes WHERE CodigoEmpleadoRepVentas IS NOT NULL GROUP BY CodigoEmpleadoRepVentas;</li>
+            <li>SELECT CodigoEmpleadoRepVentas, COUNT(*) AS NumeroClientes FROM Clientes GROUP BY CodigoEmpleadoRepVentas;</li>
             <li>SELECT COUNT(*) AS ClientesSinRep FROM Clientes WHERE CodigoEmpleadoRepVentas IS NULL;</li>
-            <li>SELECT MIN(FechaPago) AS PrimerPago, MAX(FechaPago) AS UltimoPago FROM Pagos;</li>
+            <li>SELECT CodigoCliente , MIN(FechaPago) AS PrimerPago, MAX(FechaPago) AS UltimoPago FROM Pagos GROUP BY CodigoCliente;</li>
             <li>SELECT DISTINCT CodigoCliente FROM Pagos WHERE FechaPago BETWEEN '2008-01-01' AND '2008-12-31';</li>
             <li>SELECT DISTINCT Estado FROM Pedidos;</li>
             <li>SELECT CodigoPedido, CodigoCliente, FechaEsperada, FechaEntrega FROM Pedidos WHERE FechaEntrega > FechaEsperada;</li>
