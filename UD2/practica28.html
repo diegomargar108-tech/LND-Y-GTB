@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+  <TITLE>Práctica 28 - Formulario de Intereses</TITLE>
+</HEAD>
+<BODY>
+
+  <h3>INTERESES:</h3>
+
+  <FORM name="formulario_intereses" action="" method="post">
+    <!-- Campo oculto solicitado -->
+    <INPUT type="hidden" name="IES" value="Pérez Minik">
+
+    CONTRASEÑA DE PERFIL: 
+    <INPUT type="password" name="contrasena" value="12345678901234" size="20">
+    <br>
+
+    CURSO: 
+    <INPUT type="text" name="curso" size="35">
+    <br>
+
+    INTERESES:<br>
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="420">
+      <TR>
+        <TD><INPUT type="checkbox" name="interes" value="Informatica" checked> Informática</TD>
+        <TD><INPUT type="checkbox" name="interes" value="Deportes"> Deportes</TD>
+        <TD><INPUT type="checkbox" name="interes" value="Salud" checked> Salud</TD>
+      </TR>
+      <TR>
+        <TD><INPUT type="checkbox" name="interes" value="Politica"> Política</TD>
+        <TD><INPUT type="checkbox" name="interes" value="Musica"> Música</TD>
+        <TD><INPUT type="checkbox" name="interes" value="literatura"> literatura</TD>
+      </TR>
+    </TABLE>
+
+    <HR>
+
+    <INPUT type="submit" value="Aceptar">
+    <INPUT type="reset" value="Borrar">
+  </FORM>
+
+</BODY>
+</HTML>

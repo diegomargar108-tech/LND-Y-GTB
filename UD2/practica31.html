@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+  <TITLE>Práctica 31 - Grupos de opciones y Textarea</TITLE>
+</HEAD>
+<BODY>
+
+  <h3>INTERESES:</h3>
+
+  <FORM name="formulario_completo" action="" method="post">
+
+    COLOR DE FONDO FAVORITO: 
+    <SELECT name="color_fondo">
+      <OPTION value="#000000">Negro</OPTION>
+      <OPTION value="#00FF00">Verde</OPTION>
+      <OPTION value="#FF0000" selected>Rojo</OPTION>
+      <OPTION value="#0000FF">Azul</OPTION>
+      <OPTION value="#FFFFFF">Blanco</OPTION>
+    </SELECT>
+    <br><br>
+
+    INTERESES: 
+    <SELECT name="intereses" size="4" multiple>
+      <OPTION value="Mascotas">Mascotas</OPTION>
+      <OPTION value="Informatica" selected>Informática</OPTION>
+      <OPTION value="Literatura">Literatura</OPTION>
+      <OPTION value="Salud" selected>Salud</OPTION>
+      <OPTION value="Cotilleos">Cotilleos</OPTION>
+      <OPTION value="Noticias">Noticias</OPTION>
+    </SELECT>
+
+    SUCURSALES: 
+    <SELECT name="sucursales" size="8">
+      <OPTGROUP label="Tenerife">
+        <OPTION value="La Laguna">La Laguna</OPTION>
+        <OPTION value="Puerto de la cruz">Puerto de la cruz</OPTION>
+        <OPTION value="Arona">Arona</OPTION>
+      </OPTGROUP>
+      <OPTGROUP label="El Hierro">
+        <OPTION value="Valverde">Valverde</OPTION>
+        <OPTION value="La Restinga">La Restinga</OPTION>
+      </OPTGROUP>
+      <OPTGROUP label="La Gomera">
+        <OPTION value="Vallehermoso">Vallehermoso</OPTION>
+        <OPTION value="San Sebastian">San Sebastián</OPTION>
+      </OPTGROUP>
+      <OPTGROUP label="La Palma">
+        <OPTION value="Mazo">Mazo</OPTION>
+        <OPTION value="El Paso">El Paso</OPTION>
+        <OPTION value="Garafia">Garafía</OPTION>
+      </OPTGROUP>
+    </SELECT>
+
+    <HR>
+
+    Introduzca sus comentarios:<br>
+    <TEXTAREA name="comentarios" rows="4" cols="45">sus comentarios aqui...</TEXTAREA>
+
+    <HR>
+
+    <INPUT type="submit" value="Aceptar">
+    <INPUT type="reset" value="Borrar">
+
+  </FORM>
+
+</BODY>
+</HTML>
