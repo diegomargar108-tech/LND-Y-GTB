@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Diego Martínez García">
+    <meta name="description" content="Formulario de inscripción para el Club Deportivo">
+    <meta name="keywords" content="Club Deportivo, Inscripción, HTML5, Formulario">
+    <title>Inscripción Club Deportivo - Diego Martínez García</title>
+</head>
+<body>
+
+    <header>
+        <h2 style="text-align:center;">Diego Martínez García</h2>
+    </header>
+
+    <main>
+        <div style="text-align:center;">
+            <img src="logo.png" alt="Logo del Club Deportivo" width="150">
+        </div>
+
+        <form action="recorrer.php" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="diegomdni" maxlength="9" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe contener 8 números y 1 letra" required>
+                    <br><br>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="diegomnombre" maxlength="20" required>
+                    <br><br>
+
+                    <label for="apellido1">Apellido 1:</label>
+                    <input type="text" id="apellido1" name="diegomapellido1" maxlength="20" required>
+                    <br><br>
+
+                    <label for="apellido2">Apellido 2:</label>
+                    <input type="text" id="apellido1" name="diegomapellido2" maxlength="20">
+                    <br><br>
+
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="diegomdireccion" maxlength="80">
+                    <br><br>
+
+                    <label for="cp">Código Postal:</label>
+                    <input type="text" id="cp" name="diegomcp" maxlength="5" pattern="[0-9]{5}" title="Debe contener 5 números">
+                    <br><br>
+
+                    <label for="poblacion">Población:</label>
+                    <input type="text" id="población" name="diegompoblacion" maxlength="64">
+                    <br><br>
+
+                    <label for="provincia">Provincia:</label>
+                    <select id="provincia" name="diegomprovincia">
+                        <option value="Santa Cruz de Tenerife" selected>Santa Cruz de Tenerife</option>
+                        <option value="Las Palmas">Las Palmas</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Valencia">Valencia</option>
+                    </select>
+                    <br><br>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="diegomtelefono" maxlength="9" pattern="[0-9]{9}" title="Debe contener 9 números">
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="diegomemail" maxlength="64">
+                    <br><br>
+
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="diegomusuario" maxlength="9">
+                    <br><br>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="diegompassword" maxlength="9">
+                    <br><br>
+
+                    <label for="fecha_nac">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha_nac" name="diegomfechanac">
+                    <br><br>
+
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="diegomsexo">
+                        <option value="MUJER">MUJER</option>
+                        <option value="HOMBRE">HOMBRE</option>
+                        <option value="OTRO">OTRO</option>
+                    </select>
+                    <br><br>
+
+                    <label for="documento">Foto o DNI escaneado:</label>
+                    <input type="file" id="documento" name="diegomdocumento" accept=".pdf, .jpg, .jpeg, application/pdf, image/jpeg">
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Datos Deportivos y Adicionales</legend>
+
+                    <label for="deporte">Deporte favorito:</label>
+                    <select id="deporte" name="diegomdeporte">
+                        <option value="FÚTBOL">FÚTBOL</option>
+                        <option value="TENIS">TENIS</option>
+                        <option value="NATACIÓN">NATACIÓN</option>
+                        <option value="CICLISMO">CICLISMO</option>
+                    </select>
+                    <br><br>
+
+                    <span>Experiencia previa en clubes:</span>
+                    <input type="radio" id="exp_si" name="diegomexperiencia" value="Sí">
+                    <label for="exp_si">Sí</label>
+                    <input type="radio" id="exp_no" name="diegomexperiencia" value="No">
+                    <label for="exp_no">No</label>
+                    <br><br>
+
+                    <label for="club_anterior">Nombre del club anterior:</label>
+                    <input type="text" id="club_anterior" name="diegomclubanterior" maxlength="32">
+                    <br><br>
+
+                    <label for="categoria">Categoría solicitada:</label>
+                    <select id="categoria" name="diegomcategoria">
+                        <option value="INFANTIL">INFANTIL</option>
+                        <option value="JUVENIL">JUVENIL</option>
+                        <option value="SENIOR">SENIOR</option>
+                    </select>
+                    <br><br>
+
+                    <label for="idiomas">Idiomas:</label><br>
+                    <select id="idiomas" name="diegomidiomas[]" multiple size="4">
+                        <option value="ESPAÑOL">ESPAÑOL</option>
+                        <option value="INGLÉS">INGLÉS</option>
+                        <option value="FRANCÉS">FRANCÉS</option>
+                        <option value="OTROS">OTROS</option>
+                    </select>
+                    <br><br>
+
+                    <label for="otros idiomas">En caso de elegir OTROS en idiomas, especifique cuál:</label><br>
+                    <textarea id="otros_idiomas" name="diegomotrosidiomas" rows="2" cols="40"></textarea>
+                    <br><br>
+
+                    <label for="otros_datos">Otros datos:</label><br>
+                    <textarea id="otros_datos" name="diegomotrosdatos" rows="4" cols="40"></textarea>
+                    <br><br>
+            </fieldset>
+
+            <br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </main>
+
+
+
+</body>
+</html>
